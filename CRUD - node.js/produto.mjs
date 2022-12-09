@@ -1,7 +1,8 @@
-import Sequelize  from "sequelize"; 
+const Sequelize = require("sequelize"); 
 
 // o banco de dados 
-import componenteSequelize from "./db.mjs";
+const componenteSequelize = require("./db.js"); 
+
 
 const Produto = componenteSequelize.define('Produto', 
   {
@@ -23,4 +24,8 @@ const Produto = componenteSequelize.define('Produto',
         allowNull: false, 
     }
   }
-); 
+) 
+
+module.exports = Produto; 
+
+
